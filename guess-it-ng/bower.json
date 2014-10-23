@@ -1,0 +1,11 @@
+{
+  "name": "guess-it",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "1.3.0"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "1.3.0"
+  }
+}
