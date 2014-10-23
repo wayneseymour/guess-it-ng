@@ -3,18 +3,14 @@ describe('guess it ctrl', function () {
 
   var scope;
   var guessItCtrl;
-  var log;
-  var modal;
-  var guessItSvc;
+  var openGuessItModal;
 
   beforeEach(module('guess-it-module'));
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     guessItCtrl = $controller('GuessItCtrl', {
       $scope: scope,
-      guessItSvc: guessItSvc,
-      $log: log,
-      $modal: modal
+      openGuessItModal: openGuessItModal
     });
   }));
 

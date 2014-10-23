@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <title>Guess It NG</title>
   <link rel="stylesheet" href="src/guess-it-app/styles/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/guess-it-app/guess-it/assets/styles/guess-it.css">
 </head>
 <body ng-app="guess-it">
 
 <div ng-controller="GuessItCtrl">
-  <input type="button" class="guess-it-btn button" value="Start Guessing" ng-click="guessIt.play()">
+  <button class="btn btn-default guess-it-btn" ng-click="guessIt.play()">Start Guessing</button>
 </div>
 
-<div ng-controller="AlertDemoCtrl">
-  <alert ng-repeat="alert in alerter.alerts" type="{{alert.type}}" close="alerter.closeAlert($index)">
-    {{alert.msg}}
-  </alert>
-  <button class='btn btn-default' ng-click="alerter.addAlert()">Add Alert</button>
-</div>
+<!--<div ng-controller="AlertDemoCtrl">-->
+  <!--<alert ng-repeat="alert in alerter.alerts" type="{{alert.type}}" close="alerter.closeAlert($index)">-->
+    <!--{{alert.msg}}-->
+  <!--</alert>-->
+  <!--<button class='btn btn-default' ng-click="alerter.addAlert()">Add Alert</button>-->
+<!--</div>-->
 
 <script src="src/guess-it-app/bower_components/angular/angular.js"></script>
 <script src="src/guess-it-app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
