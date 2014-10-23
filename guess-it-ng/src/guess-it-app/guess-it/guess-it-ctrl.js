@@ -9,7 +9,7 @@
           play: function play () {
             //guessItSvc(3);
 
-            openGuessItModal();
+            openGuessItModal(3);
 
           }
         };
