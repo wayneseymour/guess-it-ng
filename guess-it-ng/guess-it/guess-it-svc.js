@@ -3,7 +3,7 @@
 
   angular.module('guess-it-module')
     .factory('guessItSvc', [
-      function guessItService (number) {
+      function guessItService () {
 
         return function guessIt (number) {
           var guess = +prompt('Guess a number less than 10');

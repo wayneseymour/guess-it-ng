@@ -3,19 +3,27 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title>Guess It NG</title>
-
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="guess-it-app.js"></script>
-  <script src="guess-it/guess-it-module.js"></script>
-  <script src="guess-it/guess-it-ctrl.js"></script>
-  <script src="guess-it/guess-it-svc.js"></script>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 <body ng-app="guess-it">
 
 <div ng-controller="GuessItCtrl">
-  <input type="button" class="guess-it-btn" value="Start Guessing" ng-click="guessIt.play()">
+  <input type="button" class="guess-it-btn button" value="Start Guessing" ng-click="guessIt.play()">
 </div>
 
+<div ng-controller="AlertDemoCtrl">
+  <alert ng-repeat="alert in alerter.alerts" type="{{alert.type}}" close="alerter.closeAlert($index)">
+    {{alert.msg}}
+  </alert>
+  <button class='btn btn-default' ng-click="alerter.addAlert()">Add Alert</button>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="guess-it/guess-it-module.js"></script>
+<script src="guess-it/guess-it-ctrl.js"></script>
+<script src="guess-it/guess-it-svc.js"></script>
+<script src="my-bootstrap/my-bootstrap-module.js"></script>
+<script src="guess-it-app.js"></script>
 </body>
 </html>
