@@ -8,9 +8,13 @@
     <div class="modal-body">
       <table class="table">
         <tr>
-          <td><input class="guess-it-input" type="text" placeholder="Enter your guess"></td>
+          <td><input class="guess-it-input" type="text" placeholder="Enter your guess" ng-model="guessItModal.guess"></td>
         </tr>
       </table>
+      <button class="btn btn-success" ng-click="guessItModal.takeAGuess()">
+        Take a shot
+        <i class="fa fa-long-arrow-right"></i>
+      </button>
     </div>
   </div>
   <div class="modal-footer">

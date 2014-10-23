@@ -3,12 +3,15 @@
 
   angular.module('guess-it-module')
     .controller('GuessItModalCtrl',
-    ['$scope', '$modalInstance',
-      function GuessItModalCtrl ($scope, $modalInstance) {
+    ['$scope', '$modalInstance', '$log',
+      function GuessItModalCtrl ($scope, $modalInstance, $log) {
 
         $scope.guessItModal = {
           close: function close () {
             $modalInstance.dismiss('close');
+          },
+          takeAGuess: function takeAGuess () {
+            $log.info('TAKE A GUESS: ', $scope.guessItModal.guess);
           }
 
         };
