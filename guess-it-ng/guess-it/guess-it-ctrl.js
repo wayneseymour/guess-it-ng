@@ -5,7 +5,7 @@
     .controller('GuessItCtrl', ['$scope', 'guessItSvc',
       function GuessItCtrl ($scope, guessItSvc) {
         $scope.guessIt = {
-          startGame: function startGame () {
+          play: function play () {
             guessItSvc(3);
           }
         };
