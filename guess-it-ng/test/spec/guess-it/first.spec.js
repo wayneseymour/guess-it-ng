@@ -3,7 +3,7 @@ describe('first test', function () {
 
   var scope;
 
-  beforeEach(angular.mock.module('guess-it'));
+  beforeEach(angular.mock.module('guess-it-module'));
 
   beforeEach(angular.mock.inject(function($rootScope) {
     scope = $rootScope.$new();

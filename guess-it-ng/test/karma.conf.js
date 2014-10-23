@@ -7,7 +7,7 @@ module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../../guess-it-ng',
+    basePath: '../guess-it-ng',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -15,13 +15,14 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'guess-it-app.js',
-      'guess-it/guess-it-module.js',
-      'guess-it/guess-it-ctrl.js',
-      'guess-it/guess-it-svc.js',
-      'test/spec/**/*.spec.js'
+      '../src/guess-it-app/bower_components/angular/angular.js',
+      '../src/guess-it-app/bower_components/angular-mocks/angular-mocks.js',
+      '../src/guess-it-app.js',
+      '../src/guess-it-app/guess-it/guess-it-module.js',
+      '../src/guess-it-app/guess-it/guess-it-ctrl.js',
+      '../src/guess-it-app/guess-it/guess-it-svc.js',
+      '../src/guess-it-app/my-bootstrap/my-bootstrap-module.js',
+      '../test/spec/**/*.spec.js'
     ],
 
     // list of files to exclude
