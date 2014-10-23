@@ -10,7 +10,12 @@
 
             var modalInstance = $modal.open({
               controller: 'GuessItModalCtrl',
-              template: '<div>a modal</div>'
+              templateUrl: 'src/guess-it-app/guess-it/assets/guess-it-modal.html',
+              resolve: {
+                guessItSvc: function getGuessItSvc () {
+                  return guessItSvc;
+                }
+              }
             });
 
             modalInstance.result
