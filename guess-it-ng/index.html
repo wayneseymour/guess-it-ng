@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <title>Guess It NG</title>
 
-  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
   <script src="guess-it-app.js"></script>
   <script src="guess-it/guess-it-module.js"></script>
   <script src="guess-it/guess-it-ctrl.js"></script>
   <script src="guess-it/guess-it-svc.js"></script>
+
 </head>
 <body ng-app="guess-it">
+
 <div ng-controller="GuessItCtrl">
-  <input type="button" class="guess-it-btn" value="Start Guessing">
+  <input type="button" class="guess-it-btn" value="Start Guessing" ng-click="guessIt.startGame()">
 </div>
-
-
 
 </body>
 </html>

@@ -2,8 +2,8 @@
   'use strict';
 
   angular.module('guess-it-module')
-    .service('guess-it-svc', [
-      function GuessItService (number) {
+    .factory('guessItSvc', [
+      function guessItService (number) {
 
         return function guessIt (number) {
           var guess = +prompt('Guess a number less than 10');

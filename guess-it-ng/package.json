@@ -1,0 +1,19 @@
+{
+  "name": "guess-it-ng",
+  "version": "0.0.1",
+  "description": "Recursive guessing game in angular.",
+  "main": "index.html",
+  "scripts": {
+    "test": "mjnw",
+    "run": "./node_modules/reload/bin/reload -b -p 9090"
+  },
+  "keywords": [
+    "guess",
+    "recursion"
+  ],
+  "author": "Wayne K. Seymour III",
+  "license": "ISC",
+  "devDependencies": {
+    "reload": "^0.1.0"
+  }
+}

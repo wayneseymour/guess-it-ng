@@ -1,5 +1,5 @@
 (function () {
   'use strict';
 
-  angular.module('guess-it', []);
+  angular.module('guess-it', ['guess-it-module']);
 })();

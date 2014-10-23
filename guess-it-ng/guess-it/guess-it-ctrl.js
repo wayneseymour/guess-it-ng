@@ -2,11 +2,11 @@
   'use strict';
 
   angular.module('guess-it-module')
-    .controller('GuessItCtrl', ['$scope',
-      function GuessItCtrl ($scope) {
+    .controller('GuessItCtrl', ['$scope', 'guessItSvc',
+      function GuessItCtrl ($scope, guessItSvc) {
         $scope.guessIt = {
           startGame: function startGame () {
-            console.log('\n### start the game');
+            guessItSvc(3);
           }
         };
       }]);
