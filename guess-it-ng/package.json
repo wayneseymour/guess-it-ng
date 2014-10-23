@@ -4,7 +4,7 @@
   "description": "Recursive guessing game in angular.",
   "main": "index.html",
   "scripts": {
-    "test": "mjnw",
+    "test": "./node_modules/karma/bin/karma start test/karma.conf.js",
     "run": "./node_modules/reload/bin/reload -b -p 9090"
   },
   "keywords": [
@@ -14,6 +14,10 @@
   "author": "Wayne K. Seymour III",
   "license": "ISC",
   "devDependencies": {
-    "reload": "^0.1.0"
+    "karma": "0.12.24",
+    "karma-chrome-launcher": "0.1.5",
+    "karma-coverage": "0.2.6",
+    "karma-jasmine": "0.1.5",
+    "reload": "0.1.0"
   }
 }
