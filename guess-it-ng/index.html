@@ -18,6 +18,12 @@
   </div>
 </div>
 
+<div ng-controller="AlertsCtrl">
+  <alert ng-repeat="alert in alerter.alerts" type="{{alert.type}}" close="alerter.closeAlert($index)">
+    {{alert.msg}}
+  </alert>
+</div>
+
 <!--<div ng-controller="AlertDemoCtrl">-->
 <!--<alert ng-repeat="alert in alerter.alerts" type="{{alert.type}}" close="alerter.closeAlert($index)">-->
 <!--{{alert.msg}}-->
@@ -25,13 +31,14 @@
 <!--<button class='btn btn-default' ng-click="alerter.addAlert()">Add Alert</button>-->
 <!--</div>-->
 
+
 <script src="src/guess-it-app/bower_components/angular/angular.js"></script>
 <script src="src/guess-it-app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="src/guess-it-app/guess-it/guess-it-module.js"></script>
 <script src="src/guess-it-app/guess-it/guess-it-modal-ctrl.js"></script>
 <script src="src/guess-it-app/guess-it/guess-it-ctrl.js"></script>
 <script src="src/guess-it-app/guess-it/guess-it-svc.js"></script>
-<script src="src/guess-it-app/my-bootstrap/my-bootstrap-module.js"></script>
+<script src="src/guess-it-app/my-bootstrap/alerts-module.js"></script>
 <script src="src/guess-it-app.js"></script>
 </body>
 </html>
