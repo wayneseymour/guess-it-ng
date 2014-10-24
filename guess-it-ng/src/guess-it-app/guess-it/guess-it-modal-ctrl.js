@@ -3,18 +3,19 @@
 
   angular.module('guess-it-module')
     .controller('GuessItModalCtrl',
-    ['$scope', '$modalInstance', '$log', 'numberToGuess',
-      function GuessItModalCtrl ($scope, $modalInstance, $log, numberToGuess) {
+    ['$scope', '$modalInstance', '$log', 'numberToGuess', 'guessItSvc',
+      function GuessItModalCtrl ($scope, $modalInstance, $log, numberToGuess, guessItSvc) {
 
         $scope.guessItModal = {
           close: function close () {
             $modalInstance.close('close');
           },
           takeAGuess: function takeAGuess () {
-            $log.info('TAKE A GUESS: ', $scope.guessItModal.guess);
 
-            $log.info('number: ', numberToGuess);
-          }
+            guessItSvc(numberToGuess, +$scope.guessItModal.guess, $modalInstance);
+
+          },
+          guessRangeMsg: 'Guess a number less than 10 and greater than 0'
 
         };
 

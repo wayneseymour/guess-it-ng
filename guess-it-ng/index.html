@@ -8,16 +8,21 @@
   <link rel="stylesheet" href="src/guess-it-app/styles/font-awesome/font-awesome.css">
 </head>
 <body ng-app="guess-it">
-
-<div ng-controller="GuessItCtrl">
-  <button class="btn btn-default guess-it-btn" ng-click="guessIt.play()">Start Guessing</button>
+<h3 class="page-header"><i class="fa fa-tasks"></i>
+  Guess-It Recursive
+  <small>was recursive, will be again soon</small>
+</h3>
+<div class="well well-large">
+  <div ng-controller="GuessItCtrl">
+    <button class="btn btn-info guess-it-btn" ng-click="guessIt.play()">Start Guessing</button>
+  </div>
 </div>
 
 <!--<div ng-controller="AlertDemoCtrl">-->
-  <!--<alert ng-repeat="alert in alerter.alerts" type="{{alert.type}}" close="alerter.closeAlert($index)">-->
-    <!--{{alert.msg}}-->
-  <!--</alert>-->
-  <!--<button class='btn btn-default' ng-click="alerter.addAlert()">Add Alert</button>-->
+<!--<alert ng-repeat="alert in alerter.alerts" type="{{alert.type}}" close="alerter.closeAlert($index)">-->
+<!--{{alert.msg}}-->
+<!--</alert>-->
+<!--<button class='btn btn-default' ng-click="alerter.addAlert()">Add Alert</button>-->
 <!--</div>-->
 
 <script src="src/guess-it-app/bower_components/angular/angular.js"></script>
