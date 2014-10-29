@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="src/guess-it-app/styles/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="src/guess-it-app/guess-it/assets/styles/guess-it.css">
   <link rel="stylesheet" href="src/guess-it-app/styles/font-awesome/font-awesome.css">
+
+  <script src="http://fb.me/react-0.12.0.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.12.0.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
 </head>
 <body ng-app="guess-it">
 <h3 class="page-header"><i class="fa fa-tasks"></i>
@@ -23,6 +28,117 @@
     {{alert.msg}}
   </alert>
 </div>
+
+<div id="content"></div>
+<script type="text/jsx">
+  // Your code here
+  // tutorial1.js
+  var CommentBox = React.createClass({
+    render: function() {
+      return (
+        <div className="commentBox">
+        Hello, world! I am a CommentBox.
+        </div>
+      );
+    }
+  });
+  React.render(
+    <CommentBox />,
+    document.getElementById('content')
+  );
+
+  // tutorial2.js
+  var CommentList = React.createClass({
+    render: function() {
+      return (
+        <div className="commentList">
+        Hello, world! I am a CommentList.
+        </div>
+      );
+    }
+  });
+
+  var CommentForm = React.createClass({
+    render: function() {
+      return (
+        <div className="commentForm">
+        Hello, world! I am a CommentForm.
+        </div>
+      );
+    }
+  });
+
+  // tutorial3.js
+  var CommentBox = React.createClass({
+    render: function() {
+      return (
+        <div className="commentBox">
+          <h1>Comments</h1>
+          <CommentList />
+          <CommentForm />
+        </div>
+      );
+    }
+  });
+
+  // tutorial4.js
+  var CommentList = React.createClass({
+    render: function() {
+      return (
+        <div className="commentList">
+          <Comment author="Pete Hunt">This is one comment</Comment>
+          <Comment author="Jordan Walke">This is *another* comment</Comment>
+        </div>
+      );
+    }
+  });
+
+  // tutorial5.js
+  var Comment = React.createClass({
+    render: function() {
+      return (
+        <div className="comment">
+          <h2 className="commentAuthor">
+          {this.props.author}
+          </h2>
+        {this.props.children}
+        </div>
+      );
+    }
+  });
+
+  // tutorial6.js
+  var converter = new Showdown.converter();
+  var Comment = React.createClass({
+    render: function() {
+      return (
+        <div className="comment">
+          <h2 className="commentAuthor">
+          {this.props.author}
+          </h2>
+        {converter.makeHtml(this.props.children.toString())}
+        </div>
+      );
+    }
+  });
+
+  // tutorial7.js
+  var converter = new Showdown.converter();
+  var Comment = React.createClass({
+    render: function() {
+      var rawMarkup = converter.makeHtml(this.props.children.toString());
+      return (
+        <div className="comment">
+          <h2 className="commentAuthor">
+          {this.props.author}
+          </h2>
+          <span dangerouslySetInnerHTML={{__html: rawMarkup}} />
+        </div>
+      );
+    }
+  });
+</script>
+
 
 <!--<div ng-controller="AlertDemoCtrl">-->
 <!--<alert ng-repeat="alert in alerter.alerts" type="{{alert.type}}" close="alerter.closeAlert($index)">-->
