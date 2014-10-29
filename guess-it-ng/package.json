@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start test/karma.conf.js",
-    "run": "./node_modules/reload/bin/reload -b -p 9090"
+    "run": "./node_modules/reload/bin/reload -b -p 9090 html,js,css,eot,svg,ttf,woff"
   },
   "keywords": [
     "guess",
